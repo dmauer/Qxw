@@ -1,9 +1,9 @@
-// $Id: filler.h -1   $
+// $Id: filler.h 725 2019-02-25 17:02:16Z mo $
 
 /*
 Qxw is a program to help construct and publish crosswords.
 
-Copyright 2011 Mark Owen
+Copyright 2011-2019 Mark Owen; Windows port by Peter Flippant
 http://www.quinapalus.com
 E-mail: qxw@quinapalus.com
 
@@ -28,9 +28,12 @@ Fifth Floor, Boston, MA  02110-1301, USA.
 #define __FILLER_H__
 
 // control functions for filler called from main code
-extern int filler_start(void);
-extern int filler_step(void);
-extern void filler_stop(void);
-extern void getposs(struct entry*e,char*s,int r);
+extern void filler_init();
+extern void filler_finit();
+extern int filler_start(int mode);
+extern void filler_wait();
+extern void filler_stop();
+extern void getposs(struct entry*e,char*s,int r,int dash);
+extern int filler_status;
 
 #endif
