@@ -1,0 +1,2 @@
+?package(qxw):needs="X11" section="Games/Tools"\
+  title="Qxw" command="/usr/games/qxw" longtitle="Qxw: advanced crossword construction tool" icon="/usr/share/pixmaps/qxw.xpm"
